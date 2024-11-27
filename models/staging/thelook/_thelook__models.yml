@@ -1,0 +1,12 @@
+version: 2
+models:
+  - name: stg_thelook__distribution_centers
+    config:
+        materialized: view
+        sort: id
+    description: ""
+    columns:
+      - name: id
+      - name: name
+      - name: latitude
+      - name: longitude

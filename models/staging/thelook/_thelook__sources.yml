@@ -7,15 +7,13 @@ sources:
       - name: distribution_centers
         columns:
           - name: id
-            tests:
+            tests: &required_tests
               - unique
               - not_null
       - name: events
         columns:
           - name: id
-            tests:
-              - unique
-              - not_null
+            tests: *required_tests
           - name: traffic_source
             tests:
               - accepted_values:
@@ -36,4 +34,19 @@ sources:
           - name: id
             tests:
               - unique
-              - not_null      
+              - not_null
+      - name: orders
+        columns:
+          - name: order_id
+            tests:
+              - unique
+              - not_null
+          - name: status
+            tests:
+              - accepted_values:
+                  values:
+                    - Cancelled
+                    - Complete
+                    - Processing
+                    - Returned
+                    - Shipped

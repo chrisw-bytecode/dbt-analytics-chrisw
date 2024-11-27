@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: int_inventory_agg
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+  - name: int_order_agg
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null

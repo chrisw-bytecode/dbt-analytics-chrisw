@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: thelook
+    database: bigquery-public-data
+    schema: thelook_ecommerce
+    tables:
+      - name: distribution_centers
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null

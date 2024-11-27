@@ -3,21 +3,3 @@ WITH source AS (
       FROM {{ source('thelook','order_items') }}
 )
 SELECT * FROM source
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

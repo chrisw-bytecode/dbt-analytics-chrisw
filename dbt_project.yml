@@ -15,3 +15,6 @@ target-path: "target"
 clean-targets:
   - "target"
   - "dbt_packages"
+
+vars:
+  'dbt_date:time_zone': 'America/New_York'

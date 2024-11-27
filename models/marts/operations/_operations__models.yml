@@ -1,0 +1,6 @@
+version: 2
+models:
+  - name: customers
+    config:
+      materialized: table
+      sort: user_id

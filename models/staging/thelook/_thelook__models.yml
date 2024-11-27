@@ -29,3 +29,21 @@ models:
       - name: traffic_source
       - name: uri
       - name: event_type
+  - name: stg_thelook__inventory_items
+    config:
+        materialized: view
+        sort: id
+    description: ""
+    columns:
+      - name: id
+      - name: product_id
+      - name: created_at
+      - name: sold_at
+      - name: cost
+      - name: product_category
+      - name: product_name
+      - name: product_brand
+      - name: product_retail_price
+      - name: product_department
+      - name: product_sku
+      - name: product_distribution_center_id

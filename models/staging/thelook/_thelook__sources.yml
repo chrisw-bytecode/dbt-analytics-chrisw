@@ -25,3 +25,28 @@ sources:
                     - Email
                     - Facebook
                     - Organic
+      - name: inventory_items
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+      - name: order_items
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+      - name: orders
+        columns:
+          - name: order_id
+            tests:
+              - unique
+              - not_null
+          - name: status
+            tests:
+              - accepted_values:
+                  values:
+                    - Complete
+                    - Canceled
+                    - Returned

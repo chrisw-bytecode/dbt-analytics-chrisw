@@ -51,3 +51,9 @@ sources:
                     - Processing
                     - Returned
                     - Shipped
+      - name: products
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null

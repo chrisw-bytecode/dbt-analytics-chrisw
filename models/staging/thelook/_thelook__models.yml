@@ -97,3 +97,26 @@ models:
       - name: department
       - name: sku
       - name: distribution_center_id
+
+
+  - name: stg_thelook__users
+    config:
+        materialized: view
+        sort: id
+    description: ""
+    columns:
+      - name: id
+      - name: first_name
+      - name: last_name
+      - name: email
+      - name: age
+      - name: gender
+      - name: state
+      - name: street_address
+      - name: postal_code
+      - name: city
+      - name: country
+      - name: latitude
+      - name: longitude
+      - name: traffic_source
+      - name: created_at

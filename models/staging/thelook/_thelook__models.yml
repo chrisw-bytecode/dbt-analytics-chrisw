@@ -97,8 +97,6 @@ models:
       - name: department
       - name: sku
       - name: distribution_center_id
-
-
   - name: stg_thelook__users
     config:
         materialized: view

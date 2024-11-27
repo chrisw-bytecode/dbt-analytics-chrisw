@@ -18,3 +18,9 @@ clean-targets:
 
 vars:
   'dbt_date:time_zone': 'America/New_York'
+
+models:
+  analytics_chrisw:
+    staging:
+    intermediate:
+    marts:

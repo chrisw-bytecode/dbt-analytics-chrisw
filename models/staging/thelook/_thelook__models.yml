@@ -10,3 +10,22 @@ models:
       - name: name
       - name: latitude
       - name: longitude
+  - name: stg_thelook__events
+    config:
+        materialized: view
+        sort: id
+    description: ""
+    columns:
+      - name: id
+      - name: user_id
+      - name: sequence_number
+      - name: session_id
+      - name: created_at
+      - name: ip_address
+      - name: city
+      - name: state
+      - name: postal_code
+      - name: browser
+      - name: traffic_source
+      - name: uri
+      - name: event_type

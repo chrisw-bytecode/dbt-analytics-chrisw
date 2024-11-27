@@ -2,7 +2,7 @@ version: 2
 models:
   - name: stg_thelook__distribution_centers
     config:
-        materialized: view
+        materialized: "{{ env_var('DBT_MATERIALIZATION') }}"
         sort: id
     description: ""
     columns:
@@ -12,7 +12,7 @@ models:
       - name: longitude
   - name: stg_thelook__events
     config:
-        materialized: view
+        materialized: "{{ env_var('DBT_MATERIALIZATION') }}"
         sort: id
     description: ""
     columns:
@@ -31,7 +31,7 @@ models:
       - name: event_type
   - name: stg_thelook__inventory_items
     config:
-        materialized: view
+        materialized: "{{ env_var('DBT_MATERIALIZATION') }}"
         sort: id
     description: ""
     columns:
@@ -49,7 +49,7 @@ models:
       - name: product_distribution_center_id
   - name: stg_thelook__order_items
     config:
-        materialized: view
+        materialized: "{{ env_var('DBT_MATERIALIZATION') }}"
         sort: id
     description: ""
     columns:
@@ -64,3 +64,18 @@ models:
       - name: delivered_at
       - name: returned_at
       - name: sale_price
+  - name: stg_thelook__orders
+    config:
+        materialized: "{{ env_var('DBT_MATERIALIZATION') }}"
+        sort: order_id
+    description: ""
+    columns:
+      - name: order_id
+      - name: user_id
+      - name: status
+      - name: gender
+      - name: created_at
+      - name: returned_at
+      - name: shipped_at
+      - name: delivered_at
+      - name: num_of_item

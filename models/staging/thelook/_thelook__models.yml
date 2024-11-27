@@ -99,7 +99,7 @@ models:
       - name: distribution_center_id
   - name: stg_thelook__users
     config:
-        materialized: view
+        materialized: "{{ env_var('DBT_MATERIALIZATION') }}"
         sort: id
     description: ""
     columns:

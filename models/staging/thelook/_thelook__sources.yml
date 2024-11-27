@@ -7,15 +7,13 @@ sources:
       - name: distribution_centers
         columns:
           - name: id
-            tests:
+            tests: &required_tests
               - unique
               - not_null
       - name: events
         columns:
           - name: id
-            tests:
-              - unique
-              - not_null
+            tests: *required_tests
           - name: traffic_source
             tests:
               - accepted_values:

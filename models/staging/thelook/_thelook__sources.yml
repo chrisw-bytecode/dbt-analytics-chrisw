@@ -10,3 +10,30 @@ sources:
             tests:
               - unique
               - not_null
+      - name: events
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+          - name: traffic_source
+            tests:
+              - accepted_values:
+                  values:
+                    - Adwords
+                    - YouTube
+                    - Email
+                    - Facebook
+                    - Organic
+      - name: inventory_items
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+      - name: order_items
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null      

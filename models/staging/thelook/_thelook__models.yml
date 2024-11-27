@@ -1,6 +1,9 @@
 version: 2
 models:
   - name: stg_thelook__distribution_centers
+    tests:
+      - dbt_expectations.expect_table_row_count_to_be_between:
+          min_value: 1
     config:
         materialized: "{{ env_var('DBT_MATERIALIZATION') }}"
         sort: id
@@ -79,3 +82,18 @@ models:
       - name: shipped_at
       - name: delivered_at
       - name: num_of_item
+  - name: stg_thelook__products
+    config:
+        materialized: "{{ env_var('DBT_MATERIALIZATION') }}"
+        sort: id
+    description: ""
+    columns:
+      - name: id
+      - name: cost
+      - name: category
+      - name: name
+      - name: brand
+      - name: retail_price
+      - name: department
+      - name: sku
+      - name: distribution_center_id

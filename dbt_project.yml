@@ -1,8 +1,8 @@
-name: 'analytics_chrisw'
-version: '1.0.0'
+name: "analytics_chrisw"
+version: "1.0.0"
 config-version: 2
 
-profile: 'default'
+profile: "default"
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
@@ -17,10 +17,4 @@ clean-targets:
   - "dbt_packages"
 
 vars:
-  'dbt_date:time_zone': 'America/New_York'
-
-models:
-  analytics_chrisw:
-    staging:
-    intermediate:
-    marts:
+  "dbt_date:time_zone": "America/New_York"

@@ -3,3 +3,6 @@ WITH source AS (
       FROM {{ source('thelook','order_items') }}
 )
 SELECT * FROM source
+    {% if target.name == 'dev' %}
+LIMIT 1000
+    {% endif %}

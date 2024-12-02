@@ -27,6 +27,10 @@ models:
           - unique
           - not_null
       - name: user_id
+        tests:
+          - relationships:
+              field: id
+              to: ref('stg_thelook__users')
       - name: sequence_number
       - name: session_id
       - name: created_at
@@ -49,6 +53,10 @@ models:
           - unique
           - not_null
       - name: product_id
+        tests:
+          - relationships:
+              field: id
+              to: ref('stg_thelook__products')
       - name: created_at
       - name: sold_at
       - name: cost
@@ -59,6 +67,10 @@ models:
       - name: product_department
       - name: product_sku
       - name: product_distribution_center_id
+        tests:
+          - relationships:
+              to: ref('stg_thelook__distribution_centers')
+              field: id
   - name: stg_thelook__order_items
     config:
         materialized: "{{ env_var('DBT_MATERIALIZATION') }}"

@@ -5,6 +5,7 @@ config-version: 2
 profile: "default"
 
 model-paths: ["models"]
+docs-paths: ["docs"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
 seed-paths: ["seeds"]

@@ -5,12 +5,20 @@ sources:
     schema: thelook_ecommerce
     tables:
       - name: distribution_centers
+        freshness: 
+          warn_after:
+            count: 7
+            period: day
         columns:
           - name: id
             tests: &required_tests
               - unique
               - not_null
       - name: events
+        freshness: 
+          warn_after:
+            count: 7
+            period: day
         columns:
           - name: id
             tests: *required_tests
@@ -25,18 +33,30 @@ sources:
                     - Facebook
                     - Organic
       - name: inventory_items
+        freshness: 
+          warn_after:
+            count: 7
+            period: day
         columns:
           - name: id
             tests:
               - unique
               - not_null
       - name: order_items
+        freshness: 
+          warn_after:
+            count: 7
+            period: day
         columns:
           - name: id
             tests:
               - unique
               - not_null
       - name: orders
+        freshness: 
+          warn_after:
+            count: 7
+            period: day
         columns:
           - name: order_id
             tests:
@@ -52,12 +72,20 @@ sources:
                     - Returned
                     - Shipped
       - name: products
+        freshness: 
+          warn_after:
+            count: 7
+            period: day      
         columns:
           - name: id
             tests:
               - unique
               - not_null
       - name: users
+        freshness: 
+          warn_after:
+            count: 7
+            period: day      
         columns:
           - name: id
             tests:

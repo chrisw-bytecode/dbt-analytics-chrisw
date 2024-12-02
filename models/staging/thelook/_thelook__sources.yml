@@ -35,6 +35,7 @@ sources:
                     - Facebook
                     - Organic
       - name: inventory_items
+        description: '{{ doc("docs_stg_thelook_inventory_items") }}'
         freshness: 
           warn_after:
             count: 7

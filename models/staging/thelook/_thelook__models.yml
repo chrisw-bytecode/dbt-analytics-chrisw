@@ -10,6 +10,9 @@ models:
     description: ""
     columns:
       - name: id
+        tests:
+          - unique
+          - not_null
       - name: name
       - name: latitude
       - name: longitude

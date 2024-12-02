@@ -11,3 +11,9 @@ Common event types include:
 - purchase
 
 {% enddocs %}
+
+{% docs docs_stg_thelook_inventory_items %}
+
+Fact table containing current inventory statuses
+
+{% enddocs %}

@@ -16,6 +16,7 @@ sources:
               - unique
               - not_null
       - name: events
+        description: '{{ doc("docs_stg_thelook_events") }}'
         freshness: 
           warn_after:
             count: 7

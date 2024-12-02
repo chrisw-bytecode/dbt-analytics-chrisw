@@ -5,6 +5,7 @@ sources:
     schema: thelook_ecommerce
     tables:
       - name: distribution_centers
+        description: all distribution centers
         freshness: 
           warn_after:
             count: 7
